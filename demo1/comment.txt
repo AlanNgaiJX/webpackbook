@@ -1,0 +1,5 @@
+webpack打包 commandJS 模块 为浏览器模块，
+可惜的是，这种打包最终只能形成一个作用域的代码，无法再供别的模块require或者import 引用
+
+主要是探索以下这个文章
+参考： https://segmentfault.com/a/1190000012386576

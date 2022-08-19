@@ -1,0 +1,40 @@
+{
+    "compilerOptions": {
+      "target": "esnext",
+      "module": "commonjs",
+      "strict": true,
+      "noImplicitAny": false,//不检查Parameter 'xxx' implicitly has an 'any' type.
+      "jsx": "preserve",
+      "importHelpers": true,
+      "moduleResolution": "node",
+      "skipLibCheck": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "sourceMap": true,
+      "baseUrl": ".",
+      "types": [
+      ],
+      "paths": {
+        "@/*": [
+          "src/*"
+        ]
+      },
+      "lib": [
+        "esnext",
+        "dom",
+        "dom.iterable",
+        "scripthost"
+      ]
+    },
+    "include": [
+      "src/**/*.ts",
+      "src/**/*.tsx",
+      "src/**/*.vue",
+      "tests/**/*.ts",
+      "tests/**/*.tsx", "src/unit/articleMap.js"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }
+  

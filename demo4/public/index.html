@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+  </head>
+  <body>
+    <div class="markdown-body">
+      <p>
+        「本文已参与好文召集令活动，点击查看：<a
+          href="https://juejin.cn/post/6978685539985653767"
+          target="_blank"
+          title="https://juejin.cn/post/6978685539985653767"
+          >后端、大前端双赛道投稿，2万元奖池等你挑战！</a
+        >」
+      </p>
+      <h2 data-id="heading-0">一、 Keframe 反馈与升级</h2>
+      <p>
+        在月初发布的
+        <a
+          href="https://juejin.cn/post/6979781997568884766"
+          target="_blank"
+          title="https://juejin.cn/post/6979781997568884766"
+          id="target"
+          >已开源！Flutter 流畅度优化组件 Keframe</a
+        >
+        ，至今已获得 200+ star，收到了大家很多的反馈。
+      </p>
+      <img
+        src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e5e64acae3af42b1a4cbdd588bfb237e~tplv-k3u1fbpfcp-watermark.image"
+        alt="image.png"
+        align="left"
+        loading="lazy"
+        class="medium-zoom-image"
+      />
+      <p id="target2">在 web 端似乎也有不错的体验</p>
+      <img
+        src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d4bf03bbae724705a778bf9887023a52~tplv-k3u1fbpfcp-watermark.image"
+        alt="image.png"
+        align="left"
+        loading="lazy"
+        class="medium-zoom-image"
+      />
+      <p>
+        提出的 5 个 issue 都已跟进并解决，其中一个功能上的 BUG
+        是部分场景下会出现
+        <a
+          href="https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2FLianjiaTech%2Fkeframe%2Fissues%2F2"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+          title="https://github.com/LianjiaTech/keframe/issues/2"
+          ref="nofollow noopener noreferrer"
+          >占位不消失</a
+        >
+        已解决，使用最新版本 <code>2.0.2</code> 或者 <code>1.0.2</code> 即可。
+      </p>
+      <p>
+        同时也得到了很多优秀开发者实际的优化效果，我整理后与大家一起分享 keframe
+        实际落地的 case，并收录至
+        <a
+          href="https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2Ffluttercandies%2Fflutter_apodidae"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+          title="https://github.com/fluttercandies/flutter_apodidae"
+          ref="nofollow noopener noreferrer"
+          >flutter_apodidae</a
+        >（Flutter 中的优化合集，向大家分享各种 Flutter 的优化技巧）。
+      </p>
+      <hr />
+      <h2 data-id="heading-1">二、 合集展示</h2>
+      <p>注：demo 均为开发阶段录制，可能还未上线。</p>
+      <h3 data-id="heading-2">1. 一秒语音包变声器 App</h3>
+      <p>
+        <a
+          href="https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2Fzhangruiyu"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+          title="https://github.com/zhangruiyu"
+          ref="nofollow noopener noreferrer"
+          >Ruiyu</a
+        >
+        独立开发的 <strong>一秒语音包变声器</strong>，市场累计下载量
+        100w+，获得过华为耀星 App 奖
+        <img
+          src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/81a515ad92a1447e9bd014f5d80bfc42~tplv-k3u1fbpfcp-watermark.image"
+          alt="59E6C54EBCCF56E6B7744292BB3AB70D.jpg"
+          loading="lazy"
+          class="medium-zoom-image"
+        />
+      </p>
+      <p>下面是使用 keframe 前后统计 300 帧的对比：</p>
+      <blockquote>
+        <p>
+          <strong
+            >卡顿帧从平均 60 帧出现一次优化为 300 帧中出现一次，轻微卡顿由平均 7
+            帧一次优化为未出现，流畅占比从 36.3% 提高到 74.7%</strong
+          >。
+        </p>
+      </blockquote>
+      <h4 data-id="heading-3"><strong>数据展示</strong> Mate30 pro</h4>
+      <p>测试机型：Mate30 pro</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>优化前</th>
+            <th>优化后</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img
+                src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/51fd23f6358040ebbc5f5a14a33416b0~tplv-k3u1fbpfcp-watermark.image"
+                alt="Screenshot_20210712-152724.jpg"
+                loading="lazy"
+                class="medium-zoom-image"
+              />
+            </td>
+            <td>
+              <img
+                src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/79cbdbdb48a1437181bee07be62d12cd~tplv-k3u1fbpfcp-watermark.image"
+                alt="Screenshot_20210712-152659.jpg"
+                loading="lazy"
+                class="medium-zoom-image"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>优化前</th>
+            <th>优化后</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>平均多少帧出现一帧卡顿</td>
+            <td>60</td>
+            <td>300</td>
+          </tr>
+          <tr>
+            <td>平均多少帧出现一帧轻微卡顿</td>
+            <td>7.0</td>
+            <td>未出现轻微卡顿</td>
+          </tr>
+          <tr>
+            <td>最大耗时</td>
+            <td>146.0ms</td>
+            <td>76.0ms（图中展示有误）</td>
+          </tr>
+          <tr>
+            <td>平均耗时</td>
+            <td>25.2ms</td>
+            <td>18.3ms</td>
+          </tr>
+          <tr>
+            <td>流畅帧占比</td>
+            <td>36.3%</td>
+            <td>74.7%</td>
+          </tr>
+        </tbody>
+      </table>
+      <h4 data-id="heading-4"><strong>操作 Demo（gif 帧率只有25）</strong></h4>
+
+      <table>
+        <thead>
+          <tr>
+            <th>优化前</th>
+            <th>优化后</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img
+                src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d7383e93c7fe41398e1b7fda491176f1~tplv-k3u1fbpfcp-watermark.image"
+                alt="1 before.gif"
+                loading="lazy"
+                class="medium-zoom-image"
+              />
+            </td>
+            <td>
+              <img
+                src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ff14cf447f3e4108805813ed06b63fd2~tplv-k3u1fbpfcp-watermark.image"
+                alt="2 after.gif"
+                loading="lazy"
+                class="medium-zoom-image"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        这个 Case 中，卡顿大多发生在 TAB
+        切换的场景。因为系统会在瞬间完成页面渲染，如果页面结构复杂，在 mate30
+        pro 这样的高端设备上也容易引起卡顿。通过 keframe
+        对页面中每一个模块进行分帧加载，能有效优化切换时的卡顿。并且从体感而言，整个过渡任然非常自然。
+      </p>
+      <hr />
+      <h3 data-id="heading-5">2. 匿名 A 岛</h3>
+      <p>
+        「麋鹿君」，一个还在战斗的独立开发，上架了多款精美的应用，<a
+          href="https://link.juejin.cn/?target=https%3A%2F%2Fapps.apple.com%2Fcn%2Fdeveloper%2F%25E5%2598%2589%25E6%25A5%25A0-%25E5%25AD%2599%2Fid1480541469"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+          title="https://apps.apple.com/cn/developer/%E5%98%89%E6%A5%A0-%E5%AD%99/id1480541469"
+          ref="nofollow noopener noreferrer"
+          >AppStore</a
+        >
+        &amp;
+        <a
+          href="https://link.juejin.cn/?target=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdev%3Fid%3D5706067037523299093"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+          title="https://play.google.com/store/apps/dev?id=5706067037523299093"
+          ref="nofollow noopener noreferrer"
+          >GooglePlay</a
+        >
+      </p>
+      <img
+        src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/841c7af0d3e0419f9c015cc59ffef193~tplv-k3u1fbpfcp-watermark.image"
+        alt="image.png"
+        align="left"
+        loading="lazy"
+        class="medium-zoom-image"
+      />
+      <p>开发者反馈：</p>
+      <blockquote>
+        <p>
+          这是一款刚刚开始的 A 岛第三方客户端项目，搭配 Keframe
+          框架后在测试用机（乐视1s）上有惊人表现，效果对比「惨烈」。
+        </p>
+      </blockquote>
+      <h4 data-id="heading-6">数据展示 乐视 1S &amp; iPhone 11</h4>
+      <p>下面是使用 keframe 前后统计 100 帧的对比，测试机型：乐视 1S。</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>优化前</th>
+            <th>优化后</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img
+                src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fbb7d774e2964d51a22b57b39089090e~tplv-k3u1fbpfcp-watermark.image"
+                alt="20210712_173854_rmscr.jpg"
+                loading="lazy"
+                class="medium-zoom-image"
+              />
+            </td>
+            <td>
+              <img
+                src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c6a0deedeae44e0caf731ef8879ddcc7~tplv-k3u1fbpfcp-watermark.image"
+                alt="20210712_173313_rmscr.jpg"
+                loading="lazy"
+                class="medium-zoom-image"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        这个优化效果我觉得不需要任何多余的说明，<strong
+          >整个 App 从几乎不可用状态到 100 帧中 0 卡顿</strong
+        >。这也是 keframe
+        优化的最大价值，让<strong>一些复杂页面在中低端设备上从卡顿到流畅运行的状态</strong>。
+      </p>
+      <p>同时还有 iPhone11 上的演示数据</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>优化前</th>
+            <th>优化后</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img
+                src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/45431165cbfe4b0a821dbb02f537aaf3~tplv-k3u1fbpfcp-watermark.image"
+                alt="image.png"
+                loading="lazy"
+                class="medium-zoom-image"
+              />
+            </td>
+            <td>
+              <img
+                src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/15cd40b851b64feba7bc468dc78629a2~tplv-k3u1fbpfcp-watermark.image"
+                alt="image.png"
+                loading="lazy"
+                class="medium-zoom-image"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        性能较好的设备本身卡顿也几乎不存在卡顿，而 keframe
+        则更进一步保证了每一帧的流畅。
+      </p>
+      <h4 data-id="heading-7"><strong>操作 Demo（gif 帧率只有25）</strong></h4>
+
+      <table>
+        <thead>
+          <tr>
+            <th>优化前</th>
+            <th>优化后</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img
+                src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a97076b4a80745b4864b2300ddae5ba7~tplv-k3u1fbpfcp-watermark.image"
+                alt="1 b.gif"
+                loading="lazy"
+                class="medium-zoom-image"
+              />
+            </td>
+            <td>
+              <img
+                src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c1f6da77685642228ac7e2604230ec60~tplv-k3u1fbpfcp-watermark.image"
+                alt="1a.gif"
+                loading="lazy"
+                class="medium-zoom-image"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ee2e9feb30a34e6e99cd797b93d8eb04~tplv-k3u1fbpfcp-watermark.image"
+                alt="IP11—before.gif"
+                loading="lazy"
+                class="medium-zoom-image"
+              />
+            </td>
+            <td>
+              <img
+                src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/60e56910d2ac425db900ba821c965d07~tplv-k3u1fbpfcp-watermark.image"
+                alt="keframe- IP11.gif"
+                loading="lazy"
+                class="medium-zoom-image"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 data-id="heading-8">3、百灵创作</h3>
+      <p>
+        这是一款还在开发阶段的 App
+        ，希望做一款简约而不简单，自由又安全的专业码字软件。
+      </p>
+      <h4 data-id="heading-9">数据展示 小米 9</h4>
+      <p>下面是使用 keframe 前后统计 300 帧的对比，测试机型：小米 9。</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>优化前</th>
+            <th>优化后</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img
+                src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/49d6c70bf34d4bea9c0a08378b630087~tplv-k3u1fbpfcp-watermark.image"
+                alt="image.png"
+                loading="lazy"
+                class="medium-zoom-image"
+              />
+            </td>
+            <td>
+              <img
+                src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a02d3c680c7b412e83c2fb8662281ffc~tplv-k3u1fbpfcp-watermark.image"
+                alt="image.png"
+                loading="lazy"
+                class="medium-zoom-image"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <blockquote>
+        <p>
+          <strong
+            >卡顿峰值从 244.0ms 降低到了 126.0ms ，从平均 50
+            帧出现一次卡顿优化为平均 150 帧出现一次卡顿，300帧平均耗时从 22.4ms
+            优化至 18.5 ms</strong
+          >。
+        </p>
+      </blockquote>
+      <h4 data-id="heading-10"><strong>操作 Demo（gif 帧率只有25）</strong></h4>
+
+      <table>
+        <thead>
+          <tr>
+            <th>优化前</th>
+            <th>优化后</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img
+                src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8a00a342f72448a7a3dc3e8de9b32fca~tplv-k3u1fbpfcp-watermark.image"
+                alt="未使用keframe.gif"
+                loading="lazy"
+                class="medium-zoom-image"
+              />
+            </td>
+            <td>
+              <img
+                src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3d1062499422473a86a1167280b0504c~tplv-k3u1fbpfcp-watermark.image"
+                alt="已使用keframe.gif"
+                loading="lazy"
+                class="medium-zoom-image"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>有关 keframe 的更多用法请查看：</p>
+      <p>
+        github 地址：<a
+          href="https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2FLianjiaTech%2Fkeframe"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+          title="https://github.com/LianjiaTech/keframe"
+          ref="nofollow noopener noreferrer"
+          >github.com/LianjiaTech…</a
+        >
+      </p>
+      <p>
+        pub 查看：<a
+          href="https://link.juejin.cn/?target=https%3A%2F%2Fpub.dev%2Fpackages%2Fkeframe"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+          title="https://pub.dev/packages/keframe"
+          ref="nofollow noopener noreferrer"
+          >pub.dev/packages/ke…</a
+        >
+      </p>
+      <blockquote>
+        <p><strong>Dont forget star !</strong></p>
+      </blockquote>
+      <hr />
+      <h2 data-id="heading-11">我的使用技巧</h2>
+      <p>
+        我日常的使用经验来看，对于一些分页的列表，我会将 ListView 的
+        <code>cacheExtent</code> 设置为
+        700，同时加上渐变动画，在中低端设备上能得到明显的体验优化，而高端设备上用户几乎无感知加载。
+      </p>
+      <p>
+        而对于详情这一类列表项内容有限的页面，我会将
+        <code>cacheExtent</code> 直接调到
+        <code>double.infinity</code
+        >，打开页面即进行分帧加载，这样在滑动过程中也能带来最好的体验。
+      </p>
+      <p>
+        再次感谢提供案例的三位开发者，能感受到每个开发者对自己的 app
+        倾注了大量的心血，做得都非常精美。
+      </p>
+      <p>
+        最后，非常欢迎分享你的优化演示或者优化技巧，所有合集我均会收录到 糖果 🍬
+        中的
+        <a
+          href="https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2Ffluttercandies%2Fflutter_apodidae"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+          title="https://github.com/fluttercandies/flutter_apodidae"
+          ref="nofollow noopener noreferrer"
+          >flutter_apodidae</a
+        >
+      </p>
+      <p>
+        下个系列我预计会花 4-6 期从<strong>计算机网络原理</strong>，到
+        <strong>Dart 中的网络编程</strong>，最后再到
+        <strong>Dio 的架构设计</strong>，通过原理分析 +
+        练习的方式，带大家由浅入深的掌握 Dart 中的网络编程与 Dio 库的设计。
+      </p>
+      <p>
+        如果遇到了任何问题与建议，欢迎在评论区或者公众号联系我，或者 issue 和
+        pr。
+      </p>
+      <p>
+        公众号：<strong>进击的Flutter</strong>或者
+        <strong>runflutter</strong>
+        里面整理收集了最详细的Flutter进阶与优化指南，欢迎关注。
+      </p>
+    </div>
+  </body>
+</html>
