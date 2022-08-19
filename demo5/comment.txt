@@ -1,3 +1,5 @@
 基于demo1继续探索编译模块化，编译后仍可以被 require 和 import引用
 
-参考：https://www.webpackjs.com/guides/author-libraries/
+参考：
+https://www.webpackjs.com/guides/author-libraries/
+https://github.com/kalcifer/webpack-library-example
